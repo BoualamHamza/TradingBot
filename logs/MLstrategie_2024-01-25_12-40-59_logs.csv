@@ -1,0 +1,33 @@
+2024-01-25 12:40:59,554: root: INFO: MLstrategie : Executing the initialize lifecycle method
+2024-01-25 12:41:00,081: root: INFO: Current backtesting datetime 2023-12-15 08:30:00-05:00
+2024-01-25 12:41:00,082: root: INFO: MLstrategie : Executing the before_market_opens lifecycle method
+2024-01-25 12:41:00,082: root: INFO: Current backtesting datetime 2023-12-15 09:30:00-05:00
+2024-01-25 12:41:00,082: root: INFO: MLstrategie : Executing the before_starting_trading lifecycle method
+2024-01-25 12:41:00,083: root: INFO: [34mMLstrategie : Executing the on_trading_iteration lifecycle method at 2024-01-25 12:41:00[0m
+2024-01-25 12:41:00,083: root: ERROR: 'quantity'
+2024-01-25 12:41:00,084: root: ERROR: Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/lumibot/strategies/strategy_executor.py", line 831, in run
+    self._run_trading_session()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/lumibot/strategies/strategy_executor.py", line 782, in _run_trading_session
+    self._on_trading_iteration()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/lumibot/strategies/strategy_executor.py", line 274, in func_output
+    result = func_input(self, *args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/lumibot/strategies/strategy_executor.py", line 298, in func_output
+    result = func_input(self, *args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/lumibot/strategies/strategy_executor.py", line 87, in func_output
+    return func_input(self, *args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/lumibot/strategies/strategy_executor.py", line 378, in _on_trading_iteration
+    on_trading_iteration()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/lumibot/tools/decorators.py", line 62, in func_output
+    frame, result = call_function_get_frame(func_input, *args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/lumibot/tools/decorators.py", line 30, in call_function_get_frame
+    result = func(*args, **kwargs)
+  File "/Users/hamzaboualam/Desktop/Tuto/TradingBot/tardeBot.py", line 28, in on_trading_iteration
+    quantity = self.parameters["quantity"]
+KeyError: 'quantity'
+
+2024-01-25 12:41:00,084: root: INFO: MLstrategie : Executing the on_bot_crash event method
+2024-01-25 12:41:00,086: root: INFO: Backtesting finished
+2024-01-25 12:41:00,086: root: WARNING: Cannot plot returns because the strategy returns are missing
+2024-01-25 12:41:00,136: root: WARNING: Cannot create a tearsheet because the strategy returns are missing
+2024-01-25 12:41:00,136: backtest_stats: INFO: Backtest took 0:00:00.581987 for a speed of 0.000
